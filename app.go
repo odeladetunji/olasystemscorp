@@ -11,10 +11,11 @@ func main(){
 
 	router := gin.Default();
 	router.Static("/assets", "./assets");
-	router.LoadHTMLFiles("./templates/app.html");
+	// router.LoadHTMLFiles("./templates/app.html");
+	router.LoadHTMLFiles("./templates/ola-system.html");
 
 	router.GET("/", func(c *gin.Context){
-		c.HTML(http.StatusOK, "app.html", gin.H{
+		c.HTML(http.StatusOK, "ola-system.html", gin.H{
 			"message": "Hypersonic Inc",
 		})
 	})
