@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    background-color: black;
     margin: 0px;
     padding: 0px;
-    background-color: white;
+    /* background-color: white; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-size: 14px; */
 }
 
 .banner {
@@ -16,157 +18,102 @@
     margin-top: 0px;
 }
 
-.bannerCover {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.bannerCover p {
-    background-color: transparent;
-    text-align: center;
-    color: white;
-}
-
-.bannerCover h3 {
-    color: white;
-    text-align: center;
-    background-color: transparent;
-    margin: auto;
-    padding-top: 300px;
-    font-weight: bold;
-    font-size: 40px;
-}
-
-.techStackCover {
+.navBar {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 100px;
-}
-
-.techStack {
-    width: 250px;
-    height: 70px;
-    color: black;
-    font-size: 14px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 70px;
-    margin-right: 25px;
-    border-radius: 5px;
-    margin-top: 20px;
-    border: 1px solid black;
-    color: purple;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-    border: 1px solid white;
-    /* border: none; */
-}
-
-.technology {
-    padding-left: 30px;
-}
-
-.technology h3{
-    text-align: center;
-    padding-top: 40px;
+    width: 100%;
+    background-color: white;
+    height: 60px;
+    border-bottom: 1px solid black;
     padding-bottom: 20px;
-    text-decoration: underline;
+    padding-top: 20px;
 }
 
-.services {
-    width: 100%;
-    background-color: #f1f1f1;
-    padding-bottom: 100px;
+.navBar .leftSide {
+    background-color: white;
+    width: 40%;
 }
 
-.services  h3 {
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    background-color: #f1f1f1;
-    text-decoration: underline;
-}
-
-.services ul {
-    width: 100%;
-    background-color: #f1f1f1;
-}
-
-.services ul li {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.navBar .leftSide ul {
+    background-color: white;
+    display: inline-block;
     list-style-type: none;
-    background-color: #f1f1f1;
-    color: purple;
-    /* cursor: pointer; */
+    float: left;
 }
 
-.footer p {
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-size: 13px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.header {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: black;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-}
-
-.header ul {
-    float: right;
-    background-color: black;
-}
-
-.header ul li {
+.navBar .leftSide ul li {
+    background-color: white;
     list-style-type: none;
+    display: inline-block;
+}
+
+.navBar .rightSide {
+    background-color: white;
+    width: 60%;
+}
+
+.navBar .rightSide ul li {
+    background-color: white;
     display: inline;
-    color: white;
-    /* font-weight: bold; */
-    font: 14px;
-    background-color: transparent;
-    padding: 30px;
-    
-}
-
-.contact {
-    width: 100%;
-}
-
-
-.aboutUsD {
-    background-color: #000000;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    /* font-f; */
-}
-
-.aboutUsD h3 {
-    background-color: black;
-    text-align: center !important;
-    color: black;
-    color: white;
-    padding-top: 40px;
-}
-
-.aboutUsD P {
-    background-color: black;
-    line-height: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: white;
-    padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.navBar .rightSide ul {
+    background-color: white;
+    list-style-type: none;
+    float: right;
+}
+
+.navBar svg {
+    background-color: white;
+    /* background-color: black; */
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.mainNav {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.mainNav {
+    background-color: #0C056D;;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.mainNav .leftSide {
+    background-color: #0C056D;
+    width: 30%;
+}
+
+.mainNav .rightSide {
+    background-color: #0C056D;
+    width: 70%;
+}
+
+.mainNav .rightSide ul {
+    float: right;
+    list-style-type: none;
+    background-color: #0C056D;
+    margin-right: 20px;
+}
+
+.mainNav .rightSide ul li {
+    padding-left: 30px;
+    background-color: #0C056D;
+    display: inline-block;
+    color: white;
+}
+
+
+
 
 
 
