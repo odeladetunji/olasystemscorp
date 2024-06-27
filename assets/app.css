@@ -1,41 +1,151 @@
 * {
     box-sizing: border-box;
-    background-color: white;
     margin: 0px;
     padding: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    background-color: rgb(73, 87, 160);
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif !important; */
 }
 
-.banner {
-    width: 100%;
-    height: 850px;
-    background-image: url("/assets/images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 0px;
+form {
+    width: 40%;
+    background-color: white;
+    margin-left: 5%;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-left: 2%;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-left: 30%;
 }
 
-.headerImage {
-    
+form h6 {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-.container {
-    margin: 0;
+.logoForm {
+    width: 290px;
+    height: 150px;
+    /* background-color: black; */
+    border: 1px solid rgb(55, 87, 233);
+    /* margin-left: 14%; */
+    margin-bottom: 10px;
+    background-image: url("/assets/images/micros-logo2.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
-.left-header {
-    padding-top: 300px;
-    padding-bottom: 100px;
+label {
+    /* font-size: 12px; */
+    background-color: white;
 }
 
-.left-image {
-    background-color: #ff9a00;
+select {
+    width: 95%;
+    border: 0.1px solid grey;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10px;
 }
 
-@media only screen and (max-width: 800px) {
-    .mainNav {
-       display: none;
+.greyedOut {
+    background-color: #eeeeee;
+}
+
+input {
+    width: 95%;
+    border: 0.1px solid grey;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    /* font-size: 10px; */
+}
+
+input[type="text"]
+{
+    font-size:14px;
+}
+
+input[type="date"]
+{
+    font-size:12px;
+}
+
+input[type="number"]
+{
+    font-size:14px;
+}
+
+input[type="submit"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(73, 87, 160);
+    margin-bottom: 40px;
+}
+
+.greyedOut {
+    background-color: #eeeeee;
+    border: none;
+}
+
+.getStatedButton input[type="submit"]:hover {
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    background-color: lightseagreen;
+}
+
+#idn {
+    background-color: white;
+    margin-top: 20px;
+}
+
+#formFile1, #formFile2 {
+    width: 95%;
+    font-size: 13px;
+    /* background-color: white; */
+    /* margin-right: 10%; */
+}
+
+label {
+    font-size: 13px;
+    /* font-weight: bold; */
+    color: rgb(73, 87, 160);
+}
+
+#addressState, #identityType {
+    font-size: 13px;
+}
+/* #dcf0fa */
+
+@media only screen and (max-width: 540px) {
+    form {
+        width: 90%;
+        background-color: white;
+        margin-left: 5%;
+        border-radius: 5px;
+        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-left: 4%;
+        margin-top: 70px;
+        margin-bottom: 100px;
     }
 }
 

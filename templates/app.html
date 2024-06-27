@@ -8,33 +8,154 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="row topHeader">
-                <div class="col-md-6 left-header">
-                   <h1>Get a four man diabetic team (Endocrinologist, 
-                    diatician, nurse and yourself). Chat with them on the go ...</h1>
-                </div>
-                <div class="col-md-6 left-image">
-                   <div class="headerImage">
-                         <p>hello</p>
-                   </div>
-                </div>
-            </div>
+        <div class="">
+            <form action="" name="kycForm" id="kyc">
+                <div class="logoForm"></div>
+                <h6>KYC LEVEL 3</h6>
+                <input type="text" readonly placeholder="First Name" value="Olatunji" class="greyedOut"> <br><br>
+                
+                <input type="text" readonly placeholder="Last Name" value="Odelade" class="greyedOut"><br><br>
+                <input type="text" readonly placeholder="Email" value="odeladetunji@gmail.com" class="greyedOut"><br><br>
+                <input type="text" readonly placeholder="Phone Number" value="+23460284864" class="greyedOut"><br><br>
+                <input type="text" readonly placeholder="Nigeria" value="Nigeria" class="greyedOut"><br><br>
+                <select name="kycForm" id="addressState" required>
+                    <option value="">--select a state--</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">Federal Capital Territory</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                </select><br><br>
+                <label>City</label>
+                <input type="text" placeholder="City" id="city" required><br><br>
+                <label>Street</label>
+                <input type="text" placeholder="Street" required><br><br> 
+                <label>Postal Code</label>
+                <input type="number" placeholder="Postal Code (six digit)" required><br><br>
+                <select name="kycForm" id="identityType" required>
+                    <option value="">--select ID Card type--</option>
+                    <option value="NIN">NIN</option>
+                    <option value="Drivers License">Drivers License</option>
+                    <option value="Voters Card">Voters Card</option>
+                    <option value="Passport">Passport</option>
+                </select>
+                <label id="idn">Identity Number</label>
+                <input type="text" placeholder="e.g NIN, Passport No, Drivers License No" required><br><br>
+                <label>Upload Valid ID Card</label>
+                <input class="form-control" type="file" id="formFile1" required> <br>
+                <label>Upload Passport Photograph</label>
+                <input class="form-control" type="file" id="formFile2" required> <br>
+                <label>Date Of Birth</label>
+                <input type="date" required><br><br>
+                <input type='submit'/>
+            </form>
         </div>
-        <div class="row footer">
-            <div class="leftSide">
-                <div>
+        <script type='text/javascript'>
+            $(document).ready(function() {
+                function GetURLParameter(sParam){
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++) {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam) {
+                            return sParameterName[1];
+                        }
+                    }
+                }
 
-                </div>
-            </div>
-            <div class="rightSide"> 
-                <ul>
-                    <li>Copyright Olasystems 2023</li>
-                </ul>
-            </div>
-        </div>
+                //Self invoking function
+                (function ValidateUrl(){
+                    const token = GetURLParameter('token')
+                    const email = GetURLParameter('email')
+                    const firstName = GetURLParameter('firstName')
+                    const lastName = GetURLParameter('lastName')
+                    const phoneNo = GetURLParameter('phoneNo')
+                    const country = GetURLParameter('country')
+                })()
+
+                $("form").submit(function(e){
+                    e.preventDefault();
+                    const token = GetURLParameter('token')
+                    const email = GetURLParameter('email')
+                    const firstName = GetURLParameter('firstName')
+                    const lastName = GetURLParameter('lastName')
+                    const phoneNo = GetURLParameter('phoneNo')
+                    const country = GetURLParameter('country')
+
+                    const state = $('#addressState').val()
+                    const street = $('#addressStreet').val()
+                    const postalCode = $('#postalCode').val()
+                    const dateOfBirth = $('#dateOfBirth').val()
+                    const city = $('#city').val()
+                    const identityType = $('#identityType').val()
+                    const formFile1 = $('#formFile1').val()
+                    const formFile2 = $('#formFile2').val()
+
+                    const formData = new FormData();
+                    formData.append("firstName", firstName)
+                    formData.append("lastName", firstName)
+                    formData.append("email", firstName)
+                    formData.append("country", firstName)
+                    formData.append("phoneNo", firstName)
+                    formData.append("city", city)
+                    formData.append("state", state)
+                    formData.append("street", street)
+                    formData.append("postalCode", postalCode)
+                    formData.append("idCard", formFile1)
+                    formData.append("photo", formFile2)
+                    formData.append("dateOfBirth", dateOfBirth)
+                    formData.append("identityType", formData)
+
+                    async function ApiCall(formData){
+                        const response = await fetch("http://example.org/post", {
+                           method: "PUT",
+                           body: formData,
+                           headers: {Authorization: 'Bearer '.concat(token)}
+                        });
+                    }
+
+                    ApiCall(formData)
+                });
+            });
+        </script>
     </body>
 </html>
