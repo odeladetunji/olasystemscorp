@@ -79,7 +79,7 @@
                     <option value="Passport">Passport</option>
                 </select>
                 <label id="idn">Identity Number</label>
-                <input type="text" placeholder="e.g NIN, Passport No, Drivers License No" required><br><br>
+                <input type="text" placeholder="e.g NIN, Passport No, Drivers License No" id="identityNumber" required><br><br>
                 <label>Upload Valid ID Card</label>
                 <input class="form-control" type="file" id="formFile1" required> <br>
                 <label>Upload Passport Photograph</label>
@@ -129,13 +129,14 @@
                     const identityType = $('#identityType').val()
                     const formFile1 = $('#formFile1').val()
                     const formFile2 = $('#formFile2').val()
+                    const identityNumber = $('#identityNumber').val()
 
                     const formData = new FormData();
                     formData.append("firstName", firstName)
-                    formData.append("lastName", firstName)
-                    formData.append("email", firstName)
-                    formData.append("country", firstName)
-                    formData.append("phoneNo", firstName)
+                    formData.append("lastName", lastName)
+                    formData.append("email", email)
+                    formData.append("country", country)
+                    formData.append("phoneNo", phoneNo)
                     formData.append("city", city)
                     formData.append("state", state)
                     formData.append("street", street)
@@ -144,7 +145,7 @@
                     formData.append("photo", formFile2)
                     formData.append("dateOfBirth", dateOfBirth)
                     formData.append("identityType", formData)
-
+                    formData.append("identityNumber", formData)
                     async function ApiCall(formData){
                         const response = await fetch("http://example.org/post", {
                            method: "PUT",
